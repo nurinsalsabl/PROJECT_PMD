@@ -1,0 +1,8 @@
+streamlit
+pandas
+scikit-learn
+scikit-image
+pillow
+numpy
+pickle
+cv2
