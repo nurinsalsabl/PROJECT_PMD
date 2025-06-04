@@ -4,6 +4,5 @@ scikit-learn
 scikit-image
 pillow
 numpy
-pickle
 cv2
 gdown
