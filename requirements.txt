@@ -4,5 +4,5 @@ scikit-learn
 scikit-image
 pillow
 numpy
-cv2
+opencv-python
 gdown
