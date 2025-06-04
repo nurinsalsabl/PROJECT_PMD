@@ -88,5 +88,4 @@ if uploaded_file is not None:
     pred = model.predict(features_pca)
     label = le.inverse_transform(pred)[0]
 
-    st.write(f"Jumlah fitur: {len(features)} (Harusnya: 34602)")
     st.success(f"Prediksi: **{label}**")
