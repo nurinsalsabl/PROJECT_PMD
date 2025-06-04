@@ -5,10 +5,17 @@ import streamlit as st
 import cv2
 from skimage.feature import hog, graycomatrix, graycoprops
 from skimage.transform import resize
+import gdown 
 
 # Load model dan preprocessing tools
-with open('svm_fracture_model.pkl', 'rb') as f:
+
+url = 'https://drive.google.com/uc?id=1LiqZd-sKGuOsRN-mNOh-kGKoWLnb65oD'
+output = 'model.pkl'
+gdown.download(url, output, quiet=False)
+
+with open(output, 'rb') as f:
     artifacts = pickle.load(f)
+
 
 model = artifacts['model']
 scaler = artifacts['scaler']
