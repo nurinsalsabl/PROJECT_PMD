@@ -9,7 +9,7 @@ import gdown
 
 # Load model dan preprocessing tools
 
-url = 'https://drive.google.com/uc?id=1LiqZd-sKGuOsRN-mNOh-kGKoWLnb65oD'
+url = 'https://drive.google.com/uc?id=10Dj65AbLyzPbkz3UJ16WQ3r_PtVaASmq'
 output = 'model.pkl'
 gdown.download(url, output, quiet=False)
 
