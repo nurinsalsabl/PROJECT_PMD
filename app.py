@@ -8,14 +8,13 @@ from skimage.transform import resize
 import gdown 
 
 # Load model dan preprocessing tools
-
-url = 'https://drive.google.com/file/d/1s8kB9izBxbFyBaPHD9_VMUW-gog1UfKD/view?usp=drive_link'
+file_id = '1s8kB9izBxbFyBaPHD9_VMUW-gog1UfKD'
+url = f'https://drive.google.com/uc?id={file_id}'
 output = 'model.pkl'
 gdown.download(url, output, quiet=False)
 
 with open(output, 'rb') as f:
     artifacts = pickle.load(f)
-
 
 model = artifacts['model']
 scaler = artifacts['scaler']
@@ -47,8 +46,7 @@ def process_single_image(img_pil, image_size=(256, 256)):
 
 # Fungsi untuk ekstraksi fitur (GLCM + HOG)
 def extract_glcm_features(img_masked):
-    # Pastikan ukuran sama dengan saat training
-    # Jika dulu kamu training tanpa resize, kemungkinan ukuran aslinya 512x512
+    # Resize dan normalisasi
     img_resized = resize(img_masked, (256, 256), anti_aliasing=True)
     img_uint8 = (img_resized * 255).astype(np.uint8)
 
