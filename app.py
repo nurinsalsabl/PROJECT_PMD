@@ -8,7 +8,7 @@ from skimage.transform import resize
 import gdown 
 
 # Load model dan preprocessing tools
-file_id = '1s8kB9izBxbFyBaPHD9_VMUW-gog1UfKD'
+file_id = '10Dj65AbLyzPbkz3UJ16WQ3r_PtVaASmq'
 url = f'https://drive.google.com/uc?id={file_id}'
 output = 'model.pkl'
 gdown.download(url, output, quiet=False)
